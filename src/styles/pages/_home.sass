@@ -1,0 +1,441 @@
+.home-title
+	+fs(48rem)
+	line-height: 1.2
+	font-weight: 600
+	color: #48626f
+	margin-bottom: 30px
+	+media-breakpoint-down(lg)
+		+fs(36rem)
+	+media-breakpoint-down(md)
+		+fs(32rem)
+	+media-breakpoint-down(sm)
+		+fs(24rem)
+	&:before
+		content: ''
+		+pos(abs, 0px null null 50%)
+		width: 1px
+		height: 70px
+		background: linear-gradient(#16c1f3,color-rgba(#16c1f3,0)) 
+	&.text-white
+		&:before
+			background: linear-gradient(#fff,color-rgba(#fff,0)) 
+.home-des
+	+fs(18rem)
+	color: #48626f
+	margin: -20px auto 40px
+	+media-breakpoint-down(md)
+		+fs(16rem)
+.page-title
+	+fs(24rem)
+	line-height: 1.3
+	color: #48626f
+	font-weight: 600
+	border-left: 4px solid $red
+	padding: 0px 10px
+	margin-bottom: 20px
+	+media-breakpoint-down(lg)
+		+fs(26rem)
+	+media-breakpoint-down(md)
+		+fs(24rem)
+	+media-breakpoint-down(sm)
+		+fs(18rem)
+	a
+		display: block
+		+pos(rel,null)
+		color: inherit
+		font-weight: inherit
+		&:after
+			content: 'arrow_forward'
+			@extend .material-icons
+			+fs(18rem)
+			color: $red
+			+pos(abs, 6px 0 null null)
+			+media-breakpoint-down(lg)
+.page-title2
+	@extend .page-title
+	border-left-color: $blue
+	line-height: 1
+
+.small-title
+	@extend .page-title
+	+fs(18rem)
+	+media-breakpoint-down(md)
+		+fs(16rem)
+	a
+		&:after
+			top: 3px
+
+.home-section
+	padding: 70px 0
+	+pos(rel,null)
+	+transform(perspective(1px)translateZ(0))
+	.section-bg
+		+pos(abs, 0 null 0 0)
+		right: 0
+		z-index: -1
+
+.home-news
+	@extend .home-section
+	.ads-list
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 30px
+		.ads
+			display: block
+			text-align: center
+			margin-bottom: 30px
+			img
+	.news-wrap
+		&.s2
+			padding: 15px 20px
+			background: darken($white,4%)
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+	.news-list
+		.item
+		.news-bigitem
+			display: block
+			.img
+				img
+					width: 100%
+			.caption
+				padding: 20px 0
+			time
+				+fs(14rem)
+				line-height: 1
+				color: darken($white,40%)
+				display: block
+			.name
+				+fs(18rem)
+				line-height: 1.3
+				color: $title
+				font-weight: 600
+				+textover(3)
+				margin-top: 5px
+			&:hover
+				.name
+					color: $red
+		.news-item
+			+flexbox
+			border-top: 1px solid darken($white,10%)
+			padding: 10px 0
+			time
+				+fs(14rem)
+				color: darken($white,40%)
+				display: block
+				width: 80px
+			.name
+				width: calc(100% - 80px)
+				+fs(14rem)
+				line-height: 1.3
+				color: $title
+				font-weight: 500
+				+textover(3)
+			&:hover
+				.name
+					color: $red
+	.news-list2
+		.item
+			margin-bottom: 5px
+			padding-bottom: 5px
+			border-bottom: 1px dashed darken($white,10%)
+			&:last-child
+				margin-bottom: 0
+				padding-bottom: 0
+				border-bottom: none
+		.news-item
+			display: block
+			+fs(14rem)
+			font-weight: 500
+			color: $title
+			&:hover
+				color: $red
+	.banggia
+		margin-bottom: 10px
+	.des
+		text-align: right
+		font-style: italic
+		color: $title
+.home-news2
+	@extend .home-section
+	background: darken($white,4%)
+	.news-wrap
+	.news-list
+	.news-bigitem
+		display: block
+		+pos(rel,null)
+		+bor-rad(40px 0 40px 0)
+		overflow: hidden
+		border: 5px solid $white
+		box-shadow: 3px 3px 15px color-rgba($black,0.05)
+		margin-bottom: 30px
+		&:hover
+			box-shadow: 10px 10px 20px color-rgba($black,0.1)
+		.img
+			img
+				width: 100%
+		.caption
+			background: $cyan
+			color: $white
+			padding: 20px 25px
+			+bor-rad(30px 0 30px 0)
+			+pos(abs, 50% 50% 0 0)
+			z-index: 1
+			+media-breakpoint-down(md)
+				padding: 15px 20px
+				right: 0
+			.name
+				+fs(24rem)
+				line-height: 1.3
+				font-weight: 600
+				+media-breakpoint-down(md)
+					+fs(18rem)
+			.link
+				+fs(14rem)
+				+flexbox
+				align-items: center
+				align-content: center
+				+pos(abs,null null 20px 25px)
+				&:after
+					content: 'arrow_forward'
+					@extend .material-icons
+					margin-left: 5px
+					+fs(16rem)
+					line-height: 1
+	.news-item
+		+flexbox
+		+pos(rel,null)
+		+bor-rad(40px 0 40px 0)
+		overflow: hidden
+		background: $white
+		border: 5px solid $white
+		box-shadow: 3px 3px 15px color-rgba($black,0.05)
+		margin-bottom: 30px
+		+transition(all,0.5s)
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+		&:hover
+			box-shadow: 10px 10px 20px color-rgba($black,0.1)
+		.img
+			width: 46%
+			img
+				width: 100%
+		.caption
+			width: 54%
+			padding: 20px 30px
+			+pos(rel,null)
+			+media-breakpoint-down(md)
+				padding: 15px 20px
+			.name
+				+fs(20rem)
+				line-height: 1.3
+				color: $title
+				font-weight: 600
+				+media-breakpoint-down(md)
+					+fs(14rem)
+			.link
+				+fs(14rem)
+				+flexbox
+				color: $red
+				align-items: center
+				align-content: center
+				+pos(abs,null null 20px 30px)
+				+media-breakpoint-down(md)
+					bottom: 15px
+					left: 20px
+					+fs(12rem)
+				&:after
+					content: 'arrow_forward'
+					@extend .material-icons
+					margin-left: 5px
+					+fs(16rem)
+					line-height: 1
+	.btn-wrap
+		padding-top: 30px
+	.btn-viewmore
+		display: inline-block
+		background: $red
+		color: $white
+		+fs(15rem)
+		+bor-rad(50px)
+		padding: 0px 30px
+		line-height: 40px
+		border: 2px solid $white
+		box-shadow: 3px 3px 10px color-rgba($black,0.2)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-overview
+	@extend .home-section
+	background: #16c1f3
+	.overview-wrap
+	.overview-list
+		+flexbox
+		flex-wrap: wrap
+		border-left: 1px solid color-rgba($white,0.2)
+		.item
+			width: 20%
+			border-right: 1px solid color-rgba(white,0.2)
+			border-bottom: 1px solid color-rgba(white,0.2)
+			+media-breakpoint-down(md)
+				width: 25%
+			+media-breakpoint-down(sm)
+				width: 33.33%
+			+media-breakpoint-down(xs)
+				width: 50%
+			&:nth-child(6),&:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10)
+				border-bottom: none
+			&:nth-child(6),&:nth-child(7),&:nth-child(8)
+				+media-breakpoint-down(md)
+					border-bottom: 1px solid color-rgba(white,0.2)
+	.overview-item
+		text-align: center
+		color: $white
+		padding: 20px 5px
+		.icon
+			margin-bottom: 10px
+			img
+				+media-breakpoint-down(md)
+					width: 100px
+		.name
+			+fs(20rem)
+			font-weight: 700
+			text-shadow: 1px 2px 5px color-rgba($black,0.2)
+			+media-breakpoint-down(md)
+				+fs(16rem)
+			sup
+				font-weight: inherit
+		.des
+			+fs(16rem)
+			text-shadow: 1px 2px 5px color-rgba($black,0.2)
+			+media-breakpoint-down(md)
+				+fs(14rem)
+	.btn-wrap
+		padding-top: 30px
+	.btn-viewmore
+		display: inline-block
+		background: $red
+		color: $white
+		+fs(15rem)
+		+bor-rad(50px)
+		padding: 0px 30px
+		line-height: 40px
+		border: 2px solid $white
+		box-shadow: 3px 3px 10px color-rgba($black,0.2)
+		&:after
+			content: '\f105'
+			margin-left: 5px
+.home-service
+	@extend .home-section
+	padding-bottom: 250px
+	+media-breakpoint-down(md)
+		padding-bottom: 200px
+	.service-wrap
+	.service-list
+		text-align: center
+		.item
+			+pos(rel,null)
+			+ .item
+				&:before
+					content: ''
+					+pos(abs, 0 null null 0)
+					width: 2px
+					height: 400px
+					background: linear-gradient(color-rgba($blue,0),color-rgba($blue,1),color-rgba($blue,0))
+					opacity: 0.5
+	.service-item
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+		.img
+			margin-bottom: 25px
+			img
+				+media-breakpoint-down(md)
+					width: 100px
+		.caption
+			max-width: 300px
+			margin: 0 auto
+			.name 
+				+fs(18rem)
+				line-height: 1.3
+				color: $title
+				font-weight: 700
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(14rem)
+			.des
+				+fs(15rem)
+				line-height: 1.3
+				color: $title
+				margin-bottom: 20px
+				+media-breakpoint-down(md)
+					+fs(13rem)
+			.link
+				display: inline-block
+				background: $red
+				color: $white
+				+fs(36rem)
+				+bor-rad(50px)
+				width: 40px
+				height: 40px
+				line-height: 34px
+				border: 2px solid $white
+				box-shadow: 3px 3px 10px color-rgba($black,0.2)
+.home-video-wrap
+	@extend .home-section
+	padding: 50px 0
+	background: darken($white,4%)
+	.home-video
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+		.video
+			display: block
+			+pos(rel,null)
+			padding: 2px
+			box-shadow: 2px 2px 10px color-rgba($black,0.1)
+			&:before
+				content: ''
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: 3
+				background: url(../img/play.png) center center no-repeat
+				background-size: 15% auto
+	.home-ads
+		.ads
+			display: block
+			+pos(rel,null)
+			padding: 2px
+			box-shadow: 2px 2px 10px color-rgba($black,0.1)
+.home-system
+	@extend .home-section
+	background: #74d5f2
+	.system-filter
+		+flexbox
+		justify-content: center
+		margin-bottom: 30px
+		.item
+			width: 50%
+			text-align: center
+			margin-bottom: 30px
+			img
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					width: 100px
+			.name
+				+fs(18rem)
+				font-weight: 700
+				color: $white
+				text-shadow: 1px 2px 5px color-rgba($black,0.2)
+				+media-breakpoint-down(sm)
+					+fs(12rem)
+	.system-map
+		+bor-rad(40px 0px 40px 0px)
+		overflow: hidden
+		border: 2px solid $white
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		box-shadow: 2px 3px 25px color-rgba($black,0.25)
+		img
+			height: 500px
+			max-width: unset

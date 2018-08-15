@@ -1,0 +1,119 @@
+footer
+	background: #edf5f6
+	.footer-top
+		padding: 40px 0px 20px
+		.row
+			margin: 0px -10px
+			.col-12
+				padding: 0px 10px
+		.footer-col
+			margin-bottom: 20px
+		.footer-title
+			+fs(18rem)
+			color: $title
+			font-weight: 600
+			margin-bottom: 20px
+		.footer-link
+			a
+				display: block
+				color: $title
+				fs(14rem)
+				line-height: 1.3
+				margin-bottom: 10px
+				+pos(rel,null)
+				padding-left: 10px
+				&:before
+					content: '\f105'
+					+pos(abs, 0 null null 0)
+					color: $blue
+				&:hover
+					color: $red
+	.footer-bottom
+		background: $white
+		.footer-intro
+			+flexbox
+			flex-wrap: wrap
+			justify-content: space-between
+			padding: 35px 0px 15px
+			.about
+				+flexbox
+				margin-bottom: 20px
+				.logo
+				.des
+					padding-left: 40px
+					+media-breakpoint-down(sm)
+						padding-left: 20px
+					.company
+						+fs(18rem)
+						font-weight: 600
+						color: $title
+						margin-bottom: 10px
+						+media-breakpoint-down(sm)
+							+fs(16rem)
+					ul
+						li 
+							+fs(13rem)
+							color: $title
+			.social-wrap
+				+media-breakpoint-down(sm)
+					width: 100%
+				label
+					+fs(18rem)
+					font-weight: 600
+					color: $title
+					margin-bottom: 20px
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						text-align: center
+						width: 100%
+			.social
+				margin-bottom: 20px
+				+flexbox
+				align-items: center
+				align-content: center
+				+media-breakpoint-down(sm)
+					width: 100%
+					justify-content: center
+				a
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					width: 40px
+					height: 40px
+					+bor-rad(50px)
+					color: $white
+					background: $blue
+					+fs(18rem)
+					.fa-mobile
+						+fs(28rem)
+					+ a
+						margin-left: 10px
+					&:hover
+						background: $cyan
+		.footer-wrap
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			justify-content: space-between
+			padding: 20px 0
+			border-top: 1px solid darken($white,10%)
+			+media-breakpoint-down(sm)
+				text-align: center
+				display: block
+		.footer-nav
+			+fs(13rem)
+			color: $title
+			text-align: center
+			a
+				+ a
+					margin-left: 30px
+				&:hover
+					color: $red
+		.copyright
+			+fs(13rem)
+			color: $title
+			text-align: center
+			+media-breakpoint-down(sm)
+				margin-top: 10px

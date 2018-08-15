@@ -1,0 +1,180 @@
+.fullpage
+	padding-top: 100px
+	+media-breakpoint-down(lg)
+		padding-top: 80px
+header
+	background: $white
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	&.minimal
+		box-shadow: 0px 5px 20px color-rgba($black,0.05)
+	.header-top
+		background: $cyan
+	.col-right
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+	.top-menu
+		ul
+			+flexbox
+			align-items: center
+			align-content: center
+			color: $white
+			+fs(15rem)
+			height: 35px
+			+media-breakpoint-down(lg)
+				height: 30px
+		li
+			+ li
+				margin-left: 30px
+	.search
+		margin-left: 30px
+		height: 35px
+		border-left: 1px solid color-rgba($white,0.1)
+		+media-breakpoint-down(lg)
+			height: 30px
+			margin-left: 0
+		.search-toggle
+			width: 40px
+			height: 35px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			color: $white
+			+media-breakpoint-down(lg)
+				height: 30px
+			+media-breakpoint-down(sm)
+				width: auto
+				padding: 0px 5px
+	.language
+		width: 40px
+		height: 35px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		border-left: 1px solid color-rgba($white,0.1)
+		+media-breakpoint-down(lg)
+			height: 30px
+		+media-breakpoint-down(sm)
+			width: auto
+			padding: 0px 5px
+		img
+			display: block
+			height: 18px
+	.chart-wrap
+		height: 35px
+		border-left: 1px solid color-rgba($white,0.1)
+		padding: 4px
+		+media-breakpoint-down(lg)
+			height: 30px
+		.chart
+			+bor-rad(5px)
+			background: #0981c4
+			+fs(12rem)
+			color: $white
+			line-height: 27px
+			white-space: nowrap
+			padding: 0px 10px
+			+media-breakpoint-down(lg)
+				line-height: 22px
+			+media-breakpoint-down(md)
+				+fs(11rem)
+			+media-breakpoint-down(sm)
+				+fs(10)
+	.header-menu
+		+pos(rel,null)
+		&:before
+			content: ''
+			background: #c4dee1
+			height: 3px
+			+pos(abs, 0 0 null 0)
+			z-index: 1
+	.header-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+	.sitelogo
+		height: 65px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+media-breakpoint-down(lg)
+			height: 50px
+		a
+			display: block
+		img
+			+media-breakpoint-down(lg)
+				height: 30px
+	.btn-showmenu
+		height: 50px
+		align-items: center
+		align-content: center
+		display: none
+		color: $cyan
+		+media-breakpoint-down(lg)
+			+flexbox
+	.overlay
+		+pos(fix, 0 null 0 0)
+		right: 0
+		background: $title
+		opacity: 0.8
+		z-index: 500
+		display: none
+	.menu
+		+media-breakpoint-down(lg)
+			+pos(fix, 80px 0 null 0)
+			background: $white
+			z-index: 1000
+			border-top: 1px solid darken($white,10%)
+			box-shadow: 0px 5px 20px color-rgba($black,0.1)
+			max-height: calc(100vh - 80px)
+			overflow: auto
+			display: none
+		ul
+			+flexbox
+			align-items: center
+			align-content: center
+			color: #48626f
+			+media-breakpoint-down(lg)
+				display: block
+				padding: 0 15px
+			+ ul
+				+media-breakpoint-down(lg)
+					li
+						border-top: 1px dashed darken($white,10%)
+			li
+				&:first-child
+					a
+						+fs(0)
+						+media-breakpoint-down(lg)
+							+fs(16rem)
+						&:before
+							content: 'home'
+							@extend .material-icons
+							+fs(18rem)
+							+media-breakpoint-down(lg)
+								display: none
+				+ li
+					margin-left: 20px
+					+media-breakpoint-down(lg)
+						margin-left: 0
+						border-top: 1px dashed darken($white,10%)
+				a
+					display: block
+					+fs(15rem)
+					font-weight: 600
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+						font-weight: 500
+						padding: 10px 0
+				&:hover
+					a
+						color: $blue
+				&.active
+					a
+						color: $red
